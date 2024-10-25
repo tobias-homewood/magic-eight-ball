@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './Eightball.scss'
 
 export default function Eightball({answers}) {
     const [msg, setMsg] = useState('Think of a Question');
@@ -11,7 +12,7 @@ export default function Eightball({answers}) {
     }
 
   return (
-    <button onClick={ask}>
+    <button onClick={ask} className={`magicEightBall magicEightBall-${color}`}>
       {msg}
     </button>
   )
